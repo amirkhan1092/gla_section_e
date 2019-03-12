@@ -1,20 +1,25 @@
-# sorted
-def search_binary(A,L,H,k):
-    if L<=H:
+
+# searching algorithm
+# binary
+# linear search
+def binary_search(A,L,H,num):
+    while L<=H:
         mid = int(L + (H-L)/2)
-        if A[mid] == k :
+        if A[mid]==num:
             return True
-        elif A[mid] > k:
-            return search_binary(A,L,mid-1,k)
-        elif A[mid] < k:
-            return search_binary(A,mid+1,H,k)
+        elif A[mid]>num:
+            H = mid-1
+        elif A[mid]<num:
+            L = mid+1
     else:
         return False
 
 
 
-B = (2,4,5,563,0,43,5,23,3,2)
-B =  sorted(B)
-k = int(input('enter the value'))
-result = search_binary(B,0,len(B)-1,k)
-print(result)
+a = [1,2,3,8,6,7,3]
+a.sort()
+# a = [1,2,3,3,6,7,8]
+k = int(input('enter the value for search '))
+data = binary_search(a,0,len(a)-1,k)
+print(data)
+
