@@ -1,5 +1,10 @@
-a = open('lines.txt','w')
+a = open('lines.txt','r')
 
-a.write('line 1\nline 2\nline 3')
+# data1 = a.readline()
+# data2 = a.readline()
+
+data = a.readlines()
+print(data)
+# print(data2)
 
 a.close()
