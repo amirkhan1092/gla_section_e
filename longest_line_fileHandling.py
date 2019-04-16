@@ -13,8 +13,8 @@ def largest(f):
 
 
 file = 'tabledata.txt'
-char, postion = largest(file)
-print('largest line at postion ',postion)
+char, position = largest(file)
+print('largest line at position ',position)
 print('number of char ',char)
 
 
