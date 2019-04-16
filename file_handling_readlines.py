@@ -1,10 +1,10 @@
-a = open('lines.txt','r')
+with open('lines.txt','r') as a:
 
 # data1 = a.readline()
 # data2 = a.readline()
 
-data = a.readlines()
-print(data)
-# print(data2)
+    data = next(a)
+    print(data)
+    # print(data2)
+print(a.closed)
 
-a.close()
