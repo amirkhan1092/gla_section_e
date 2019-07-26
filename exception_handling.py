@@ -1,20 +1,21 @@
-e='''
+h = '''
 Exception handling 
 
 Type of error
 
 1. Syntax error : Parser error 
 2. Runtime error (Exceptions ) 
- 
 
 
 '''
 
 
-while 1:
-    try:
-        a = int(input('enter the number only '))
-        print('succesfully got the value ')
-        break
-    except (EOFError, KeyboardInterrupt) :
-        print('try Again !')
+a = 10
+b = 90
+c = 0
+try:
+    c = a/int(input('enter the value '))
+except ValueError:
+    print('Value error handled ')
+
+print(c)
